@@ -10,4 +10,4 @@ data <- read.csv("data.csv")
 filtered_data <- data %>% filter(score > 80)
 
 # Save the transformed dataset
-write.csv(filtered_data, "filtered_data.csv", row.names = FALSE)
+write.csv(filtered_data, "/tmp/obj1.csv", row.names = FALSE)
