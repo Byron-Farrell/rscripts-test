@@ -13,4 +13,4 @@ data <- data %>%
   ))
 
 # Save the transformed dataset
-write.csv(data, "obj2.csv", row.names = FALSE)
+write.csv(data, "/tmp/obj2.csv", row.names = FALSE)
