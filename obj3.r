@@ -13,4 +13,4 @@ data <- data %>%
   mutate(score_z = (score - mean_score) / sd_score)
 
 # Save the transformed dataset
-write.csv(data, "/tmp/obj3.csv", row.names = FALSE)
+write.csv(data, "obj3.csv", row.names = FALSE)
