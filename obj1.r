@@ -44,7 +44,7 @@ install_missing_packages(required_packages)
 if (!require("BiocManager", quietly = TRUE)) {
   install.packages("BiocManager")
 }
-BiocManager::install(version = "3.20")
+BiocManager::install(version = "3.14")
 
 # Install Bioconductor-specific packages
 bioc_packages <- c("dsBase", "dsSwissKnife")
