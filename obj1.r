@@ -38,9 +38,13 @@ install_missing_packages <- function(packages) {
 install_missing_packages(required_packages)
 
 # Ensure Bioconductor-based packages (like dsBase, dsSwissKnife) are available
-if (!requireNamespace("BiocManager", quietly = TRUE)) {
-  install.packages("BiocManager", repos = "https://cran.r-project.org")
+# if (!requireNamespace("BiocManager", quietly = TRUE)) {
+#   install.packages("BiocManager", repos = "https://cran.r-project.org")
+# }
+if (!require("BiocManager", quietly = TRUE)) {
+  install.packages("BiocManager")
 }
+BiocManager::install(version = "3.20")
 
 # Install Bioconductor-specific packages
 bioc_packages <- c("dsBase", "dsSwissKnife")
