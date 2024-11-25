@@ -18,14 +18,6 @@ library(dsBase)
 library(dsSwissKnife)
 library(dsSwissKnifeClient)
 
-library(readr)
-library(tidyverse)
-library(DSI)
-library(DSLite)
-library(dsBase)
-library(dsBaseClient)
-library(dsSwissKnife)
-library(dsSwissKnifeClient)
 
 ####################
 # Define constants #
