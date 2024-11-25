@@ -1,49 +1,22 @@
+if(!require("devtools")) install.packages("devtools")
+if(!require("readr")) install.packages("readr")
+if(!require("tidyverse")) install.packages("tidyverse",dependencies = TRUE)
+if(!require("DSI")) install.packages("DSI")
+if(!require("DSLite")) install.packages("DSLite")
+if(!require("dsBaseClient")) install.packages('dsBaseClient', repos=c(getOption('repos'), 'http://cran.obiba.org'), dependencies=TRUE)
 
-# HDS to ADS connversion for Obj 3
-# Authors: Bola Coker/ Lilia Dela Cruz
-#
-# ver 1.0 (16/11/24): use of HDS v1.06 to convert to ADS Obj3
-#
+devtools::install_github("datashield/dsBase")
+devtools::install_github("sib-swiss/dsSwissKnife")
+devtools::install_github("sib-swiss/dsSwissKnifeClient")
 
-###############
-# Define path #
-###############
-# PATH="D:\\King's College London\\GSTT BRC Data Management Service - CTU Data\\AStar\\D2T\\Obj3_151124\\ADS"
-# setwd(PATH)
-# List of required packages
-# List of required packages
-required_packages <- c(
-  "readr",
-  "tidyverse",
-  "DSI",
-  "DSLite",
-  "dsBase",
-  "dsBaseClient",
-  "dsSwissKnife",
-  "dsSwissKnifeClient"
-)
-# Function to check if a package is installed, and if not, install it
-install_missing_packages <- function(packages) {
-  installed_packages <- installed.packages()[, "Package"]
-  to_install <- setdiff(packages, installed_packages)
-  
-  if (length(to_install) > 0) {
-    install.packages(to_install, repos = "https://cran.r-project.org")
-    message("Installed the following packages: ", paste(to_install, collapse = ", "))
-  } else {
-    message("All packages are already installed.")
-  }
-}
-# Install the required packages
-install_missing_packages(required_packages)
-# Ensure Bioconductor-based packages (like dsBase, dsSwissKnife) are available
-if (!requireNamespace("BiocManager", quietly = TRUE)) {
-  install.packages("BiocManager", repos = "https://cran.r-project.org")
-}
-# Install Bioconductor-specific packages
-bioc_packages <- c("dsBase", "dsSwissKnife")
-BiocManager::install(setdiff(bioc_packages, installed.packages()[, "Package"]))
-message("All packages installed.")
+library(readr)
+library(tidyverse)
+library(DSI)
+library(DSLite)
+library(dsBaseClient)
+library(dsBase)
+library(dsSwissKnife)
+library(dsSwissKnifeClient)
 
 library(readr)
 library(tidyverse)
