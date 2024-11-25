@@ -7,8 +7,8 @@
 ###############
 # Define path #
 ###############
-PATH="D:\\King's College London\\GSTT BRC Data Management Service - CTU Data\\AStar\\D2T\\Obj3_151124\\ADS"
-setwd(PATH)
+# PATH="D:\\King's College London\\GSTT BRC Data Management Service - CTU Data\\AStar\\D2T\\Obj3_151124\\ADS"
+# setwd(PATH)
 
 ####################
 # Define constants #
