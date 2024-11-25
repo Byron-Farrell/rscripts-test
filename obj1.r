@@ -182,7 +182,7 @@ getPtrDf=function(ptr_var){
                     ptr_var_remove=character(),btr_d_start=character(),
                     ptr_var=character())
   for (i in 1:nrow(ads.btr)){
-    row=getPtr(ads.btr$adm_c_pid[i],ads.btr$btr_d_start[i],ptr_var)
+    row=getPtrData(ads.btr$adm_c_pid[i],ads.btr$btr_d_start[i],ptr_var)
     ptr.df=rbind(ptr.df,row)
   }
   ptr.df=unique(ptr.df[ptr.df[,ptr_var_start]!="",])
