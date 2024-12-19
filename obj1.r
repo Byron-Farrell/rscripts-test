@@ -968,7 +968,7 @@ ads.obj3.pt2=Reduce(function(x,y) merge(x,y,by=c("adm_c_pid","btr_d_start"),all.
 
 # save ads obj3
 write.csv(ads.obj3.pt2,
-          "/tmp/obj1.csv",
+          "obj1.csv",
           na="",row.names=FALSE)
 
 
