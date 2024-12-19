@@ -30,18 +30,19 @@ PTR_NULL_VALUE=99
 ##################
 # open hds files #
 ##################
-hds.visits=read.csv("visits.csv")
-hds.demographics=read.csv("demographics.csv")
-hds.systemictherapy=read.csv("systemictherapy.csv")
-hds.dlqi=read.csv("dlqi.csv")
-hds.comorbidities=read.csv("comorbidities.csv")
-hds.poem=read.csv("poem.csv")
-hds.nrs=read.csv("nrs.csv")
-hds.phototherapy=read.csv("phototherapy.csv")
-hds.systemictherapyhx=read.csv("systemictherapyhx.csv")
-hds.iga=read.csv("iga.csv")
-hds.easi=read.csv("easi.csv")
-hds.topicaltherapy=read.csv("topicaltherapy.csv")
+hds.visits=read.csv("hds.visits.csv")
+hds.demographics=read.csv("hds.demographics.csv")
+hds.systemictherapy=read.csv("hds.systemictherapy.csv")
+hds.dlqi=read.csv("hds.dlqi.csv")
+hds.comorbidities=read.csv("hds.comorbidities.csv")
+hds.poem=read.csv("hds.poem.csv")
+hds.nrs=read.csv("hds.nrs.csv")
+hds.phototherapy=read.csv("hds.phototherapy.csv")
+hds.systemictherapyhx=read.csv("hds.systemictherapyhx.csv")
+hds.iga=read.csv("hds.iga.csv")
+hds.easi=read.csv("hds.easi.csv")
+hds.topicaltherapy=read.csv("hds.topicaltherapy.csv")
+
 
 # remove NA values
 hds.visits[is.na(hds.visits)]=""
